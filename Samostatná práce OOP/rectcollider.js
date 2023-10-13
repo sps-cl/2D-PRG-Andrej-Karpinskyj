@@ -26,11 +26,11 @@ class RectCollider extends Positionable {
     }
 
     get topEdge() {
-        this.y;
+        return this.y;
     }
 
     get bottomEdge() {
-        this.y + this.height;
+        return this.y + this.height;
     }
 
     set leftEdge(value) {
@@ -38,7 +38,7 @@ class RectCollider extends Positionable {
     }
 
     set rightEdge(value) {
-        return this.x = value - this.width
+        return this.x = value - this.width;
     }
 
     set topEdge(value) {
@@ -47,9 +47,5 @@ class RectCollider extends Positionable {
 
     set bottomEdge(value) {
         return this.y = value - this.height;
-    }
-
-    get center() {
-        return new Vector(this.x + this.radius, this.y + this.radius);
     }
 }
