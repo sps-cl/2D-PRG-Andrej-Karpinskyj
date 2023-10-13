@@ -9,7 +9,7 @@ class Vector {
         this.y += other.y;
     }
 
-    substract() {
+    subtract(other) {
         this.x -= other.x;
         this.y -= other.y;
     }
@@ -18,7 +18,7 @@ class Vector {
         return new Vector(this.x + other.x, this.y + other.y);
     }
 
-    difference() {
+    difference(other) {
         return new Vector(this.x - other.x, this.y - other.y);
     }
 
