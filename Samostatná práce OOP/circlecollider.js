@@ -47,4 +47,8 @@ class CircleCollider extends Positionable {
     set bottomEdge(value) {
         return this.y = value - this.radius * 2;
     }
+
+    get center() {
+        return new Vector(this.x + this.radius, this.y + this.radius);
+    }
 }
