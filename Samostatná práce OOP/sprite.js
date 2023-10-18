@@ -1,28 +1,12 @@
-class Vector {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
+class Sprite extends Positionable {
+    constructor(imageId, position, width, height) {
+        super(position);
+        this.height = height;
+        this.width = width;
+        this.image = document.getElementByld(imageId)
     }
 
-    add(other) {
-        this.x += other.x;
-        this.y += other.y;
-    }
-
-    subtract(other) {
-        this.x -= other.x;
-        this.y -= other.y;
-    }
-
-    sum(other) {
-        return new Vector(this.x + other.x, this.y + other.y);
-    }
-
-    difference(other) {
-        return new Vector(this.x - other.x, this.y - other.y);
-    }
-
-    get squareSize() {
-        return  this.x * this.x + this.y * this.y;
+    draw(context) {
+        context.drawImage(this.image, this.x, this.y, this.width, this.height)
     }
 }
