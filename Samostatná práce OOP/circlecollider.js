@@ -19,35 +19,35 @@ class CircleCollider extends Positionable {
     get leftEdge() {
         return this.x;
     }
-
-    get rightEdge() {
-        return this.x + this.radius * 2;
-    }
-
-    get topEdge() {
-        return this.y;
-    }
-
-    get bottomEdge() {
-        return this.y + this.radius * 2;        
-    }
-
     set leftEdge(value) {
         return this.x = value;
     }
 
+
+    get rightEdge() {
+        return this.x + this.radius * 2;
+    }
     set rightEdge(value) {
         return this.x = value - this.radius * 2;
     }
 
+
+    get topEdge() {
+        return this.y;
+    }
     set topEdge(value) {
         return this.y = value
     }
 
+
+    get bottomEdge() {
+        return this.y + this.radius * 2;        
+    }
     set bottomEdge(value) {
         return this.y = value - this.radius * 2;
     }
 
+    
     get center() {
         return new Vector(this.x + this.radius, this.y + this.radius);
     }
