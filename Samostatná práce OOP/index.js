@@ -2,6 +2,9 @@ let scene = new Scene(1000,700);
 let background = new Background(scene.width, scene.height);
 scene.draw(background);
 
+let player = new Player(new Vector(100,0), 150);
+scene.draw(background, player)
+
 let circle1 = new CircleCollider(new Vector(0, 0), 50);
 let circle2 = new CircleCollider(new Vector(50, 50), 70);
 let rect1 = new RectCollider(new Vector(110, 110), 50, 100);
