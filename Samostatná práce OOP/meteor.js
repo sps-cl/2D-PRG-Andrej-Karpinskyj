@@ -1,4 +1,4 @@
-class Meteor extends GameObject() {
+class Meteor extends GameObject{
     constructor(position, speed, size) {
         super(position);
         this.speed = speed;
@@ -7,6 +7,9 @@ class Meteor extends GameObject() {
     }
 
     move() {
-        super(move)
+        super.move()
+        if (this.collider.rightEdge < this.minBounds.x) { 
+        } else this.onSceneExit();
+
     }
 }
