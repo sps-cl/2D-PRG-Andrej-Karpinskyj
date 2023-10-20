@@ -21,7 +21,7 @@ function randomObstacle(xPos) {
 
 function onObstacle1Exit() {
     obstacle1 = randomObstacle(scene.width);
-    obstacle2.onSceneExit = onObstacle2Exit;
+    obstacle1.onSceneExit = onObstacle1Exit;
 }
 
 function onObstacle2Exit() {
@@ -30,20 +30,34 @@ function onObstacle2Exit() {
 
 }
 
+obstacle1.onSceneExit = onObstacle1Exit;
+obstacle2.onSceneExit = onObstacle2Exit;
 
-
-function gameLoop() {
-
-
-    if (keys["s"]) player.crouch();
-    else player.getUp();
-    if (keys["w"]) player.jump()
-
-    
-
-    if
-
-    requestAnimationFrame(draw)
+document.onkeydown = function(event) {
+    keys[event.key] = true;
 }
 
-gameLoop();
+document.onkeyup = function(event) {
+    keys[event.key] = false;
+}
+
+function gameLoop() {
+    score.increase();
+    
+    if (keys["s"]) player.crouch();
+    else player.getUp();
+    if (keys["w"]) player.jump();
+    
+    player.move();
+    obstacle1.move();
+    obstacle2.move();
+    
+    scene.draw(background, player, obstacle1, obstacle2, score);
+
+    if(player.collideWith(obstacle1) || player.collideWith(obstacle2));
+    return;
+
+    requestAnimationFrame(gameLoop);
+}
+
+return gameLoop;
