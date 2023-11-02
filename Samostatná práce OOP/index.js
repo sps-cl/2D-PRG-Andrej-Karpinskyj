@@ -1,3 +1,4 @@
+let scene = new Scene(1100, 700);
 let background = new Background(scene.width, scene.height);
 let score = new Score(new Vector(scene.width / 2, 50), "Arial", 30);
 let player = new Player(new Vector(100, 0), 150);
@@ -54,10 +55,10 @@ function gameLoop() {
     
     scene.draw(background, player, obstacle1, obstacle2, score);
 
-    if(player.collideWith(obstacle1) || player.collideWith(obstacle2));
+    if(player.collideWith(obstacle1) || player.collideWith(obstacle2))
     return;
 
     requestAnimationFrame(gameLoop);
 }
 
-return gameLoop;
+gameLoop();
