@@ -9,7 +9,7 @@ class Meteor extends GameObject{
     move() {
         super.move()
         if (this.collider.rightEdge < this.minBounds.x) { 
-        } else this.onSceneExit();
-
+            this.onSceneExit();
+        }
     }
 }
