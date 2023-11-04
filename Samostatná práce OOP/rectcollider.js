@@ -20,31 +20,29 @@ class RectCollider extends Positionable {
     get leftEdge() {
         return this.x;
     }
+    set leftEdge(value) {
+        return this.x = value;
+    }
+
 
     get rightEdge() {
         return this.x + this.width;
     }
+    set rightEdge(value) {
+        return this.x = value - this.width;
+    }
+
 
     get topEdge() {
         return this.y;
+    }
+    set topEdge(value) {
+        return this.y = value;
     }
 
     get bottomEdge() {
         return this.y + this.height;
     }
-
-    set leftEdge(value) {
-        return this.x = value;
-    }
-
-    set rightEdge(value) {
-        return this.x = value - this.width;
-    }
-
-    set topEdge(value) {
-        return this.y = value;
-    }
-
     set bottomEdge(value) {
         return this.y = value - this.height;
     }
