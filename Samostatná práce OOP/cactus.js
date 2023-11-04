@@ -5,6 +5,7 @@ class Cactus extends GameObject {
         this.sprite = new Sprite("cactus", position, width, height);
         this.collider = new RectCollider(position, width, height);
     }
+    
     move() {
         super.move()
         if (this.collider.rightEdge < this.minBounds.x) { 
