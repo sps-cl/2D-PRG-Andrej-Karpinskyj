@@ -1,8 +1,8 @@
 class GameObject extends Positionable {
-    constructor(position) {
+    constructor(position){
         super(position);
-        this.speed = new Vector(0,0);
-        this.minBounds = new Vector(-Infinity, -Infinity);
+        this.speed = new Vector(0, 0);
+        this.minBounds =  new Vector(-Infinity, -Infinity);
         this.maxBounds = new Vector(Infinity, Infinity);
     }
 
@@ -10,11 +10,11 @@ class GameObject extends Positionable {
         this.position.add(this.speed)
     }
 
-    draw(context) {
-        this.sprite.draw(context);
+    draw(context){
+        this.sprite.draw(context)
     }
 
-    collideWith(other) {
-        return this.collider.collideWith(other.collider);
+    collideWith(other){
+        return this.collider.collideWith(other.collider)
     }
 }
