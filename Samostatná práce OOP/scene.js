@@ -1,17 +1,17 @@
-class Scene {
+class Scene{
     constructor(width, height) {
-        this.width = width;
+        this.width = width; 
         this.height = height;
-        let canvas = document.createElement("canvas")
-        canvas.width = this.width;
-        canvas.height = this.height;
-        document.body.appendChild(canvas);
-        this.context = canvas.getContext("2d");
+        let platno = document.createElement("canvas");
+        platno.width = this.width;
+        platno.height = this.height;
+        document.body.appendChild(platno)
+        this.context = platno.getContext("2d")
     }
 
-    draw(...drawables) {
+    draw(...drawables){
         for (let i = 0; i < drawables.length; i++) {
-            drawables[i].draw(this.context);    
-        }  
+            drawables[i].draw(this.context)
+        }
     }
 }
