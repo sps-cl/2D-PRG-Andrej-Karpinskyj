@@ -2,7 +2,7 @@ class Score extends Positionable {
     constructor(position, font, size) {
         super(position);
         this.value = 0;
-        this.font = "px" + " " + font;
+        this.font = size + "px" + " " + font;
     }
 
     increase() {
