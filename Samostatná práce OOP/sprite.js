@@ -1,12 +1,12 @@
-class Sprite extends Positionable {
-    constructor(imageId, position, width, height) {
+class Sprite extends Positionable{
+    constructor(imageId,position, width, height){
         super(position);
-        this.height = height;
         this.width = width;
-        this.image = document.getElementByld(imageId)
+        this.height = height;
+        this.image = document.getElementById(imageId);
     }
 
-    draw(context) {
-        context.drawImage(this.image, this.x, this.y, this.width, this.height)
+    draw (context){
+        context.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
 }
