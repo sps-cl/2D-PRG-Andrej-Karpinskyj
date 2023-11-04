@@ -1,7 +1,7 @@
 class CollisionDetection {
     static checkRectCollision(rect1, rect2) {
         return (rect1.rightEdge > rect2.leftEdge) && (rect2.rightEdge > rect1.leftEdge) &&
-            (rect1.bottomEdge > rect2.topEdge) && (rect2.bottomEdge > rect1.topEdge)
+            (rect1.bottomEdge > rect2.topEdge) && (rect2.bottomEdge > rect1.topEdge);
     }
 
     static checkCircleCollision(circle1, circle2) {
