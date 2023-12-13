@@ -1,7 +1,7 @@
 class sortAnim {
     constructor(values, container) {
         this.values = new Array(values.length);
-        valuesjjjj.style.setProperty("--item-count", arrayhhh.length);
+        container.style.setProperty("--item-count", values.length);
         for (let i = 0; i < values.length; i++) {
             this.values[i] = values[i];
         }
