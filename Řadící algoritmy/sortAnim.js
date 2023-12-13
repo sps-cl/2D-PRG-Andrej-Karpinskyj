@@ -1,49 +1,48 @@
 class sortAnim {
     constructor(values, container) {
-        this.values = new Array(values.length);
         container.style.setProperty("--item-count", values.length);
+        this.values = new Array(values.length);
         for (let i = 0; i < values.length; i++) {
             this.values[i] = values[i];
         }
 
-        this.column = new Array(values.length);
+        this.columns = new Array(values.length); 
         for (let i = 0; i < values.length; i++) {
-            let value = value[i];
+            let value = values[i];
             let column = document.createElement("div");
             column.style.setProperty("--x", i);
             column.style.setProperty("--value", value);
             column.className = "item";
-            container.appendChuld(column);
-            this.column[i] = column;
+            container.appendChild(column);
+            this.columns[i] = column;
         }
     }
-
     setCompareColor(div) {
         div.style.backgroundColor = "green";
     }
-
+    
     setDefaultColor(div) {
         div.style.backgroundColor = "white";
     }
-
+    
     setSortedColor(div) {
         div.style.backgroundColor = "yellow";
     }
 
     swapValues(i, j) {
         [this.values [i], this.values[j]] = [this.values[j], this.values[i]];
-        [this.column[i], this.column[j]] = [this.column[j], this.column[i]];
-        this.column[i].style.setProperty("--x", i);
-        this.column[j].style.setProperty("--x", j);
+        [this.columns[i], this.columns[j]] = [this.columns[j], this.columns[i]];
+        this.columns[i].style.setProperty("--x", i);
+        this.columns[j].style.setProperty("--x", j);
     }
 
     async sleep(time) {
         let promise = new Promise(
-            (resolve) => {
+           (resolve) => {
                 setTimeout(()=>{
                     resolve();
-                },  time);
-            }
+                }, time);
+           } 
         )
         return promise;
     }
