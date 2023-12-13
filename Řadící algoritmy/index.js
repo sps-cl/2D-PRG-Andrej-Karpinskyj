@@ -1,17 +1,16 @@
-let bubbleSortContainer = document.getElementById("bubblesort-div");
-let insertionSortContainer = document.getElementById("bubblesort-div2");
-let max = 100;
+let container = document.getElementById("bubblesort-div");
+
+let max = 30;
 document.documentElement.style.setProperty("--max-value", max);
-
 let array = new Array(max);
-let arrayOfColumns = new Array (array.length);
 
-for (let i = 0; i < array.length; i++) {
-    array[i] = Math.round(Math.random() * max) + 1;
+for (let index = 0; index < array.length; index++) {
+    array[index] = Math.round(Math.random() * max);
 }
-
-let bubbleSort = new BubbleSortAnim(array, bubbleSortContainer);
-let insertionSort = new InsertionSortAnim(array, insertionSortContainer);
-
+let bubbleSort = new BubbleSortAnim(array, container);
 bubbleSort.sortAsc();
+
+let container1 = document.getElementById("insertionsort-div");
+
+let insertionSort = new InsertionSortAnim(array, container1);
 insertionSort.sortAsc();
