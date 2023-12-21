@@ -1,4 +1,5 @@
-class sortAnim {
+class SortAnim {
+    
     constructor(values, container) {
         container.style.setProperty("--item-count", values.length);
         this.values = new Array(values.length);
