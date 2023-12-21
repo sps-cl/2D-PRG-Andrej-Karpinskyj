@@ -1,0 +1,3 @@
+class QuickSortAnim extends SortAnim {
+    
+}
