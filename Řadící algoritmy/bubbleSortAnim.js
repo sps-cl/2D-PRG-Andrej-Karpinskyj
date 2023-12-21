@@ -1,4 +1,5 @@
-class BubbleSortAnim extends sortAnim{
+class BubbleSortAnim extends SortAnim{
+    
     async sortAsc() {
         for (let i = 0; i < this.values.length; i++) {
             let swap = false;
