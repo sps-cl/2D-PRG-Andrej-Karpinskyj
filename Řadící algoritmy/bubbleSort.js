@@ -1,4 +1,5 @@
-class BubbleSort{
+class BubbleSort {
+    
     static sortAsc (array) {
         for (let i = 0; i < array.length; i++) {
             let swap = false;
