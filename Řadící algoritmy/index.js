@@ -22,5 +22,12 @@ insertionSort.sortAsc();
 //ShellSort
 let container2 = document.getElementById("shellsort-div");
 
-let shellSort = new ShellSort(array, container2);
+let shellSort = new ShellSortAnim(array, container2);
 shellSort.sortAsc();
+
+
+//QuickSort
+let container3 = document.getElementById("quicksort-div");
+
+let quickSort = new QuickSortAnim(array, container3);
+quickSort.sortAsc();
