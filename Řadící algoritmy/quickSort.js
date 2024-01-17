@@ -1,4 +1,5 @@
 class QuickSort {
+    
     static sortAsc(array) {
         this.sortRecursive(array, 0, array.length - 1);
     }
@@ -24,4 +25,4 @@ class QuickSort {
         [array[high], array[pi]] = [array[pi], array[high]];
         return pi;
     }
-}
+} 
