@@ -31,3 +31,17 @@ let container3 = document.getElementById("quicksort-div");
 
 let quickSort = new QuickSortAnim(array, container3);
 quickSort.sortAsc();
+
+
+//MergeSort
+let container4 = document.getElementById("mergesort-div");
+
+let mergeSort = new MergeSortAnim(array, container4);
+mergeSort.sortAsc();
+
+
+//CountingSort
+let container5 = document.getElementById("countingsort-div");
+
+let countingSort = new CountingSortAnim(array, container5);
+countingSort.sortAsc();
