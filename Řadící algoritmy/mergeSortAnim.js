@@ -19,29 +19,29 @@ class MergeSortAnim extends SortAnim{
                     this.setCompareColor(this.columns[i]);
                     this.setCompareColor(this.columns[k]);
                     this.setCompareColor(this.columns[j]);
-                    await this.sleep(50);
+                    await this.sleep(100);
                     this.setDefaultColor(this.columns[i])
                     this.setDefaultColor(this.columns[j])
                     this.setDefaultColor(this.columns[k])
                     if(array1[i] < array1[j]) {
-                        array2[k] = array1[i]
+                        array2[k] = array1[i];
                         this.setValue(k,array1[i])
                         i++;
                     } else {
-                        array2[k] = array1[j]
+                        array2[k] = array1[j];
                         this.setValue(k,array1[j])
                         j++;
                     }
                     k++
                 }
                 while (i < mid) {
-                    array2[k] = array1[i]
+                    array2[k] = array1[i];
                     this.setValue(k,array1[i])
                     i++;
                     k++;
                 }
                 while (j < high) {
-                    array2[k] = array1[j]
+                    array2[k] = array1[j];
                     this.setValue(k,array1[j])
                     j++;
                     k++;
